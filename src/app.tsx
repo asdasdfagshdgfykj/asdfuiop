@@ -95,7 +95,7 @@ const apiFetch = async (
     endpoint: string,
     options: RequestInit = {}
 ) => {
-    const url = `${apiBaseUrl}${endpoint}`;
+    const url = `http://${apiBaseUrl}${endpoint}`;
     const tgInitData = window.Telegram?.WebApp?.initData;
 
     const headers = new Headers(options.headers || {});
@@ -761,6 +761,7 @@ const App: React.FC = () => {
             const replyIp = urlParams.get('replyip');
             if (replyIp) {
                 setApiBaseUrl(replyIp);
+                console.log(replyIp);
             } else {
                 setError("Ошибка конфигурации: параметр 'replyip' не найден в URL.");
             }
