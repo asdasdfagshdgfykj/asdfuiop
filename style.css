@@ -1,0 +1,26 @@
+/* Базовые импорты Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Важное примечание:
+  Вся цветовая схема приложения устанавливается динамически
+  в файле src/App.tsx через JavaScript, используя
+  CSS-переменные Telegram, такие как var(--tg-bg-color).
+*/
+
+:root {
+    /* Заглушки для десктопа, если Telegram WebApp не инициализирован */
+    --tg-bg-color: #f0f0f0;
+    --tg-secondary-bg-color: #ffffff;
+    --tg-text-color: #000000;
+    --tg-hint-color: #999999;
+    --tg-link-color: #007aff;
+    --tg-button-color: #007aff;
+    --tg-button-text-color: #ffffff;
+}
+
+body {
+    background-color: var(--tg-bg-color);
+}
