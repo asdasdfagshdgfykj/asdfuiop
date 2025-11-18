@@ -95,7 +95,7 @@ const apiFetch = async (
     endpoint: string,
     options: RequestInit = {}
 ) => {
-    const url = `http://${apiBaseUrl}${endpoint}`;
+    const url = `https://${apiBaseUrl}${endpoint}`;
     const tgInitData = window.Telegram?.WebApp?.initData;
 
     const headers = new Headers(options.headers || {});
